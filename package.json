@@ -1,6 +1,6 @@
 {
   "name": "pg-task-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -27,5 +27,13 @@
     "pg-hstore": "2.3.4",
     "pg-listen": "1.7.0",
     "sequelize": "6.6.5"
+  },
+  "homepage": "https://github.com/DanielZambelli/pg-task-queue",
+  "bugs": {
+    "url": "https://github.com/DanielZambelli/pg-task-queue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanielZambelli/pg-task-queue"
   }
 }

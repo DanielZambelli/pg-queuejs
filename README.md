@@ -5,7 +5,7 @@ Running resource-intensive tasks, long-running workflows, or batch jobs on web-s
 
 Define task callbacks for processing on a worker-process, and trigger it by queueing the task.  
 
-![FIFO](./illustration.png "FIFO")
+![FIFO](https://github.com/DanielZambelli/pg-task-queue/raw/master/illustration.png "FIFO")
 
 ## Install
 ``` js
