@@ -1,0 +1,31 @@
+{
+  "name": "pg-task-queue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "que",
+    "queue",
+    "tasks",
+    "postgresql",
+    "postgres",
+    "pg",
+    "pg-task-queue",
+    "jobs",
+    "job"
+  ],
+  "author": "Daniel Zambelli",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "27.0.6"
+  },
+  "dependencies": {
+    "moment": "2.29.1",
+    "pg": "8.6.0",
+    "pg-hstore": "2.3.4",
+    "pg-listen": "1.7.0",
+    "sequelize": "6.6.5"
+  }
+}
