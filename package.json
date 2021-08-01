@@ -1,6 +1,6 @@
 {
-  "name": "pg-task-queue",
-  "version": "1.3.5",
+  "name": "pg-queuejs",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -19,7 +19,8 @@
   "author": "Daniel Zambelli",
   "license": "ISC",
   "devDependencies": {
-    "jest": "27.0.6"
+    "jest": "27.0.6",
+    "dotenv": "10.0.0"
   },
   "dependencies": {
     "moment": "2.29.1",
@@ -28,12 +29,12 @@
     "pg-listen": "1.7.0",
     "sequelize": "6.6.5"
   },
-  "homepage": "https://github.com/DanielZambelli/pg-task-queue",
+  "homepage": "https://github.com/DanielZambelli/pg-queuejs",
   "bugs": {
-    "url": "https://github.com/DanielZambelli/pg-task-queue/issues"
+    "url": "https://github.com/DanielZambelli/pg-queuejs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielZambelli/pg-task-queue"
+    "url": "https://github.com/DanielZambelli/pg-queuejs"
   }
 }
