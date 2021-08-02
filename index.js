@@ -21,11 +21,7 @@ class PgQueueJS{
     this.db = this._initDb(pgDbUrl, dbPoolMax)
     this.tasks = this._initTasks(tableName)
     this.tasksTTL = tasksTTL
-
-    return Promise.resolve()
-      .then(() => this.tasks.sync())
-      .then(() => this._applyTTL())
-      .then(() => this)
+    this.tasks.sync().then(() => this._applyTTL())
   }
 
   subscribe(taskDefinitions, pollInterval=15000){
