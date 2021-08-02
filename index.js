@@ -12,13 +12,14 @@ class PgQueueJS{
     pgDbUrl=null,
     dbPoolMax=1,
     tasksTTL='30 days',
+    tableName='tasks'
   }){
 
     if(!pgDbUrl) throw new Error('pgDbUrl missing in PgQueueJS constructor')
 
     this.channels = new Channels(pgDbUrl)
     this.db = this._initDb(pgDbUrl, dbPoolMax)
-    this.tasks = this._initTasks()
+    this.tasks = this._initTasks(tableName)
     this.tasksTTL = tasksTTL
 
     return Promise.resolve()
@@ -56,7 +57,7 @@ class PgQueueJS{
     })
   }
 
-  _initTasks(){
+  _initTasks(tableName){
     class Tasks extends Model{}
     Tasks.init({
       id: { type: INTEGER, primaryKey: true, autoIncrement: true },
@@ -67,7 +68,7 @@ class PgQueueJS{
       log: { type: JSONB },
     },{
       sequelize: this.db,
-      modelName: 'tasks',
+      modelName: tableName,
       freezeTableName: true,
     })
     return Tasks
