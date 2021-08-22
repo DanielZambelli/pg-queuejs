@@ -106,7 +106,7 @@ class PgQueueJS{
               task.result = await taskDefinitions.find(definition => definition.taskId === task.task_id).callback(task.payload)
               task.status = 'completed'
             }catch(err){
-              task.log = err
+              task.log = err.toString()
               task.status = 'error'
             }finally{
               await task.save()
